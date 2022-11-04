@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AddressCardComponent } from './address-card/address-card.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { AddressCardComponent } from './address-card/address-card.component';
     AddressCardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

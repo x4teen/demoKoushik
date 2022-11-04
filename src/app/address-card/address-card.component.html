@@ -2,12 +2,13 @@
 <div>
     Name: {{user.name}}<br>
     Address: {{user.address}}<br>
-    Phone : <br>
-    <p *ngFor="let num of user.phone">
-        {{num}}
-    </p>
-    
-
-
-
+    <div *ngIf="user.phone.length>0">
+        <li>
+            Phone : <br>
+            <ul *ngFor="let num of user.phone">
+                {{num}}
+            </ul>
+        </li>
+    </div>
+ 
 </div>
