@@ -1,29 +1,22 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { User } from '../model/user.model';
 
 @Component({
   selector: 'app-address-card',
   templateUrl: './address-card.component.html',
-  styleUrls: ['./address-card.component.css']
+  styleUrls: ['./address-card.component.css'],
 })
 export class AddressCardComponent implements OnInit {
+  @Input('userProvided') userObj!: User;
 
-  user:any;
-  @Input('name')  userName!: String;
-
-  constructor() { 
-    
-  }
+  constructor() {}
 
   ngOnInit(): void {
-    this.user = {
-      name: this.userName,
-      address: '123 Main St, mytown',
-      phone:[
-        '718-359-2100',
-        '917-523-6058',
-        '631-940-9334'
-      ]
-    }
+    this.userObj = {
+      name: this.userObj.name,
+      designation: this.userObj.designation,
+      address: this.userObj.address,
+      phone: this.userObj.phone,
+    };
   }
-
-} 
+}

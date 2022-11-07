@@ -1,14 +1,16 @@
 <h3>User Data</h3>
 <div>
-    Name: {{user.name}}<br>
-    Address: {{user.address}}<br>
-    <div *ngIf="user.phone.length>0">
-        <li>
-            Phone : <br>
-            <ul *ngFor="let num of user.phone">
-                {{num}}
-            </ul>
-        </li>
-    </div>
- 
+  Name: {{ userObj.name }}<br />
+  Title: {{ userObj.designation }} <br />
+  Address: {{ userObj.address }}<br />
+  <div *ngIf="userObj.phone.length > 0">
+    <li>
+      Phone : <br />
+      <ul *ngFor="let num of userObj.phone">
+        {{
+          num
+        }}
+      </ul>
+    </li>
+  </div>
 </div>
