@@ -4,15 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AddressCardComponent } from './address-card/address-card.component';
 import { FormsModule } from '@angular/forms';
+import { ViewModule } from './view/view.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddressCardComponent
+    AddressCardComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]

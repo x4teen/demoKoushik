@@ -1,16 +1,25 @@
-<h3>User Data</h3>
-<div>
-  Name: {{ userObj.name }}<br />
-  Title: {{ userObj.designation }} <br />
-  Address: {{ userObj.address }}<br />
-  <div *ngIf="userObj.phone.length > 0">
-    <li>
-      Phone : <br />
-      <ul *ngFor="let num of userObj.phone">
-        {{
-          num
-        }}
-      </ul>
-    </li>
+<div class="card" style="width: 18rem; margin: 1rem; padding: 0.5rem;">
+  <h3 class="card-header text-center text-white bg-primary">User Data</h3>
+  <div class="card-body">
+    <div class="card-text">
+      <h4>{{ userObj.name }}</h4>
+      <h5>Title: {{ userObj.designation }} </h5>
+      <h6>Contact Info:
+        <button *ngIf="isCollapsed" (click)="toggleCollapse()">Show</button>
+        <button *ngIf="!isCollapsed" (click)="toggleCollapse()">Hide</button>
+      <div *ngIf="!isCollapsed"> 
+      Address: {{ userObj.address }}<br />
+      <div *ngIf="userObj.phone.length > 0">
+        <li>
+          Phone : <br />
+          <ul *ngFor="let num of userObj.phone">
+            {{
+              num
+            }}
+          </ul>
+        </li>
+      </div>
+    </div></h6>
+    </div>
   </div>
 </div>
