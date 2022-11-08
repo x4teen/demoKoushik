@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { User } from '../models/user.model';
+import { TestService } from '../service/test.service';
 
 @Component({
   selector: 'app-address-card',
@@ -8,12 +9,12 @@ import { User } from '../models/user.model';
 })
 export class AddressCardComponent implements OnInit {
   @Input() userObj!: User;
-  isCollapsed:boolean = true;
+  isCollapsed: boolean = true;
 
-  constructor() {}
-  ngOnInit(): void { }
+  constructor(svc: TestService) {}
+  ngOnInit(): void {}
 
-  toggleCollapse(){
+  toggleCollapse() {
     this.isCollapsed = !this.isCollapsed;
   }
 }
