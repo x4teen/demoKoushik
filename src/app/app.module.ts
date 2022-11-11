@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { AddressCardComponent } from './address-card/address-card.component';
@@ -9,7 +10,7 @@ import { TestService } from './service/test.service';
 
 @NgModule({
   declarations: [AppComponent, AddressCardComponent],
-  imports: [BrowserModule, FormsModule, ViewModule],
+  imports: [BrowserModule, FormsModule, ViewModule, HttpClientModule],
   providers: [TestService],
   bootstrap: [AppComponent],
 })

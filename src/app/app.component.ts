@@ -19,4 +19,8 @@ export class AppComponent {
     this.user.phone = ['631-940-9334', '917-523-6058'];
     svc.printToConsole('Hello from App component Constructor');
   }
-}
+
+  
+  }
+
+
