@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstViewComponent implements OnInit {
 
-  constructor() { }
+  userName:String = "";
+  response:any;
+  constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
+  }
+
+  getGitHubUser(){
+    let url = "https://api.github.com/users/";
+    this.http.get(url + this.userName).subscribe((response)=>{this.response=response;});
+    console.log(this.response);
   }
 
 }

@@ -1,1 +1,16 @@
-<p class="display-3 text-center text-danger">first-view works!</p>
+<div class="container">
+    <div>
+        User Name: <input type="text" [(ngModel)] = "userName"/>
+        <button class="btn btn-primary"  (click)="getGitHubUser()">Search</button>
+    </div>
+
+    <div *ngIf="response">
+        Login: {{response.login}}<br>
+        Repos: {{response.public_repos}}<br>
+        Started: {{response.created_at}}<br>
+        Last Check In: {{response.updated_at}}<br>
+        Followers: {{response.followers}}
+
+    </div>
+
+</div>

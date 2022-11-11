@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FirstViewComponent } from './first-view/first-view.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -9,7 +10,7 @@ import { FirstViewComponent } from './first-view/first-view.component';
     FirstViewComponent
   ],
   imports: [
-    CommonModule
+    CommonModule, FormsModule
   ],
   exports: [
     FirstViewComponent
