@@ -1,0 +1,8 @@
+## Add docker repo to AWS EC2
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+# Success Message: repo saved to /etc/yum.repos.d/docker-ce.repo
+
+yum-config-manager --save --setopt=docker-ce-stable.skip_if_unavailable=true
+
+yum install docker

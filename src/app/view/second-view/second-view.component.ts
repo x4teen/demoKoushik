@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { Gituser } from '../gituser.model';
 
 @Component({
-  selector: 'app-first-view',
-  templateUrl: './first-view.component.html',
-  styleUrls: ['./first-view.component.css'],
+  selector: 'app-second-view',
+  templateUrl: './second-view.component.html',
+  styleUrls: ['./second-view.component.css'],
 })
-export class FirstViewComponent implements OnInit {
+export class SecondViewComponent implements OnInit {
   userName: String = '';
   response: any;
   gituser!: Gituser;

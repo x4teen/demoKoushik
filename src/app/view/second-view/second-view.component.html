@@ -1,4 +1,4 @@
-<div class="container border bg-light">
+<div class="container bordeer bg-light">
   <div>
     User Name: <input type="text" [(ngModel)]="userName" />
     <button class="btn btn-primary" (click)="getGitHubUser()">Search</button>
@@ -10,16 +10,14 @@
     style="width: 18rem; margin: 1rem; padding: 0.5rem"
   >
     <h4 class="card-header text-center text-white bg-primary">
-      Github Response Details
+      Github UserObj Details
     </h4>
     <div class="card-body">
-      Name: {{ response.name }}<br />
-      Login: {{ response.login }}<br />
-      Repos: {{ response.public_repos }}<br />
-      Started: {{ response.created_at }}<br />
-      Last Check In: {{ response.updated_at }}<br />
-      Followers: {{ response.followers }}<br />
-      Location: {{ response.location }}
+      Name: {{ gituser.name }}<br />
+      Login: {{ gituser.login }}<br />
+      Repos: {{ gituser.public_repos }}<br />
+      Started: {{ gituser.created_at }}<br />
+      Location: {{ gituser.location }}
     </div>
   </div>
 </div>

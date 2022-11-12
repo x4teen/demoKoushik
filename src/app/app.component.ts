@@ -16,11 +16,7 @@ export class AppComponent {
     this.user.name = 'Yasmeen Khan';
     this.user.designation = 'Student';
     this.user.address = '123 Main Street, Anytown, NY';
-    this.user.phone = ['631-940-9334', '917-523-6058'];
+    this.user.phone = ['555-123-4564', '555-555-5555'];
     svc.printToConsole('Hello from App component Constructor');
   }
-
-  
-  }
-
-
+}
